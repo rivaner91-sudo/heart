@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 st.write(''' # Predicción de enfermedad del corazon ''')
-st.image("enfermedades-del-corazon.jpg", caption="enfermedades del corazon son muy peligrosas")
+st.image("enfermedades-del-corazon.jpg", caption="Las enfermedades del corazon son muy peligrosas")
 
 st.header('Datos de evaluación')
 
@@ -27,7 +27,7 @@ user_input_data = {'Sex': Sex,
                    'cp': cp,
                    'trestbps': trestbps,
                    'chol': chol
-                   'fbs': fbs,
+                    'fbs': fbs,
                    'restecg': restecg,
                    'thalach': thalach,
                    'slop,': slop,
@@ -36,7 +36,7 @@ user_input_data = {'Sex': Sex,
                      #'Fare': Fare,
                      #'Embarked': Embarked}
 
-  features = pd.DataFrame(user_input_data, index=[0])
+features = pd.DataFrame(user_input_data, index=[0])
 
   return features
 
