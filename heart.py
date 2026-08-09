@@ -17,14 +17,22 @@ def user_input_features():
   Age = st.number_input('Edad:', min_value=0, max_value=100, value = 0, step = 1)
   chol = st.number_input('colesterol:',min_value=0, max_value=500, value = 0, step = 1)
   fbs= st.number_input('fibrosis:', min_value=0, max_value=1, value = 0, step = 1)
-  #Fare = st.number_input('Tarifa:')
-  #Embarked = st.number_input('Lugar de Embarque:', min_value=0, max_value=2, value = 0, step = 1)
+  restecg= st.number_input('restecg:', min_value=0, max_value=2, value = 0, step = 1)
+  thalach= st.number_input('thalach:', min_value=0, max_value=2, value = 0, step = 1)
+  slop= st.number_input('slop:', min_value=0, max_value=2, value = 0, step = 1)
+  ca= st.number_input('ca:', min_value=0, max_value=2, value = 0, step = 1)
 
-  user_input_data = {'cp': cp,
-                     'Sex': Sex,
-                     'Age': Age,
-                     'chol': chol,
-                     'fbs': fbs}
+user_input_data = {'Sex': Sex,
+                  'Age': Age,
+                   'cp': cp,
+                   'trestbps': trestbps,
+                   'chol': chol
+                   'fbs': fbs,
+                   'restecg': restecg,
+                   'thalach': thalach,
+                   'slop,': slop,
+                   'ca': ca,
+                     }
                      #'Fare': Fare,
                      #'Embarked': Embarked}
 
