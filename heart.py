@@ -22,7 +22,7 @@ def user_input_features():
   slop= st.number_input('slop:', min_value=0, max_value=2, value = 0, step = 1)
   ca= st.number_input('ca:', min_value=0, max_value=2, value = 0, step = 1)
 
-user_input_data = {'Sex': Sex,
+  user_input_data = {'Sex': Sex,
                   'Age': Age,
                    'cp': cp,
                    'trestbps': trestbps,
@@ -36,7 +36,7 @@ user_input_data = {'Sex': Sex,
                      #'Fare': Fare,
                      #'Embarked': Embarked}
 
-features = pd.DataFrame(user_input_data, index=[0])
+  features = pd.DataFrame(user_input_data, index=[0])
 
   return features
 
