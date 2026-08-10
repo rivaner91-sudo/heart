@@ -31,17 +31,17 @@ def user_input_features():
   user_input_data = {
                      'age' : age,
                      'sex' : sex,
-                     'ca' : ca,
-                     'exang' : exang,
-                     'thalach' : thalach,
                      'cp' : cp,
-                     'slope' : slope,
-                     'chol' : chol,
-                     'thal' : thal,
-                     'oldpeak' : oldpeak,
                      'trestbps' : trestbps,
+                     'chol' : chol,
                      'fbs' : fbs,
-                     'restecg' : restecg                 
+                     'restecg' : restecg,
+                     'thalach' : thalach,
+                     'exang' : exang,
+                     'oldpeak' : oldpeak,
+                     'slope' : slope,
+                     'ca' : ca,
+                     'thal' : thal            
                      }
 
 
@@ -52,7 +52,6 @@ def user_input_features():
 df = user_input_features()
 
 HEART2 =  pd.read_csv('HEART2.csv', encoding='latin-1')
-#df= df.drop(columns=['target'])
 X = HEART2.drop(columns='target')
 Y = HEART2['target']
 
