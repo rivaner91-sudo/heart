@@ -29,17 +29,17 @@ def user_input_features():
 
 
   user_input_data = {'Age': Edad,
-                     'Sex': Sexo,
-                     'ca': ataque del corazon,
-                     'exang': angina,
-                     'thalach': frecuencia cardiaca,
-                     'cp': paro cardiaco,
-                     'slope': inclinacion,
-                     'chole': colesterol,
+                     'Sex': Sex,
+                     'ca': ca,
+                     'exang': exang,
+                     'thalach': thalach,
+                     'cp': cp,
+                     'slope': slope
+                     'chole': chole,
                      'thal': thal,
-                     'oldpeak': pico antiguo,
-                     'trestbps': presion en reposo,
-                     'fbs': fibrosis,
+                     'oldpeak': oldpeak,
+                     'trestbps': trestbps,
+                     'fbs': fbs,
                      'restecg': restecg
                      }
 
