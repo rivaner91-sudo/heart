@@ -13,14 +13,14 @@ st.header('Datos del futurto enfermo')
 def user_input_features():
   # Entrada
  
-  Age = st.number_input('Edad:', min_value=0, max_value=100, value = 0, step = 1)
-  Sex = st.number_input('Género:', min_value=0, max_value=1, value = 0, step = 1)
+  age = st.number_input('Edad:', min_value=0, max_value=100, value = 0, step = 1)
+  sex = st.number_input('Género:', min_value=0, max_value=1, value = 0, step = 1)
   ca= st.number_input('Ataque del corazon:', min_value=0, max_value=1, value = 0, step = 1)
   exang= st.number_input('angina:', min_value=0, max_value=1, value = 0, step = 1)
   thalach= st.number_input('frecuaneic cardiaca:', min_value=0, max_value=500, value = 0, step = 1)
   cp= st.number_input('paro cardiaco:', min_value=0, max_value=1, value = 0, step = 1)
   slope= st.number_input('inclinacion:', min_value=0, max_value=180, value = 0, step = 1)
-  chole= st.number_input('colesterol:', min_value=0, max_value=500, value = 0, step = 1)
+  chol= st.number_input('colesterol:', min_value=0, max_value=500, value = 0, step = 1)
   thal= st.number_input('thal:', min_value=0, max_value=1, value = 0, step = 1)
   oldpeak= st.number_input('pico antiguo:', min_value=0, max_value=500, value = 0, step = 1)
   trestbps= st.number_input('presion en reposo:', min_value=0, max_value=500, value = 0, step = 1)
@@ -28,20 +28,20 @@ def user_input_features():
   restecg= st.number_input('restecg:', min_value=0, max_value=1, value = 0, step = 1)
 
 
-  user_input_data = {'Age': Edad,
-                     'Sex': Sex,
+  user_input_data = {'age': age,
+                     'sex': sex,
                      'ca': ca,
                      'exang': exang,
                      'thalach': thalach,
                      'cp': cp,
                      'slope': slope
-                     'chole': chole,
+                     'chol': chol,
                      'thal': thal,
                      'oldpeak': oldpeak,
                      'trestbps': trestbps,
                      'fbs': fbs,
                      'restecg': restecg
-                     }
+                   }
 
 
   features = pd.DataFrame(user_input_data, index=[0])
@@ -53,7 +53,7 @@ df = user_input_features()
 HEART2 =  pd.read_csv('HEART2csv', encoding='latin-1')
 
 X = df.drop(target_column, axis=1)
-y = df[target_column]
+Y = df[target_column]
 
 
 classifier = DecisionTreeClassifier(max_depth=5, criterion='entropy', min_samples_leaf=10, max_features=5, random_state=0)
