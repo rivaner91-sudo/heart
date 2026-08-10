@@ -15,31 +15,31 @@ def user_input_features():
  
   Age = st.number_input('Edad:', min_value=0, max_value=100, value = 0, step = 1)
   Sex = st.number_input('Género:', min_value=0, max_value=1, value = 0, step = 1)
-  ca= st.number_input('ca:', min_value=0, max_value=1, value = 0, step = 1)
-  exang= st.number_input('exang:', min_value=0, max_value=1, value = 0, step = 1)
-  thalach= st.number_input('thalach:', min_value=0, max_value=1, value = 0, step = 1)
-  cp= st.number_input('cp:', min_value=0, max_value=1, value = 0, step = 1)
-  slope= st.number_input('slope:', min_value=0, max_value=1, value = 0, step = 1)
-  chole= st.number_input('chole:', min_value=0, max_value=500, value = 0, step = 1)
+  ca= st.number_input('Ataque del corazon:', min_value=0, max_value=1, value = 0, step = 1)
+  exang= st.number_input('angina:', min_value=0, max_value=1, value = 0, step = 1)
+  thalach= st.number_input('frecuaneic cardiaca:', min_value=0, max_value=500, value = 0, step = 1)
+  cp= st.number_input('paro cardiaco:', min_value=0, max_value=1, value = 0, step = 1)
+  slope= st.number_input('inclinacion:', min_value=0, max_value=180, value = 0, step = 1)
+  chole= st.number_input('colesterol:', min_value=0, max_value=500, value = 0, step = 1)
   thal= st.number_input('thal:', min_value=0, max_value=1, value = 0, step = 1)
-  oldpeak= st.number_input('oldpeak:', min_value=0, max_value=1, value = 0, step = 1)
-  trestbps= st.number_input('trestbps:', min_value=0, max_value=1, value = 0, step = 1)
-  fbs= st.number_input('fbs:', min_value=0, max_value=800, value = 0, step = 1)
+  oldpeak= st.number_input('pico antiguo:', min_value=0, max_value=500, value = 0, step = 1)
+  trestbps= st.number_input('presion en reposo:', min_value=0, max_value=500, value = 0, step = 1)
+  fbs= st.number_input('fibrosis:', min_value=0, max_value=800, value = 0, step = 1)
   restecg= st.number_input('restecg:', min_value=0, max_value=1, value = 0, step = 1)
 
 
-  user_input_data = {'Age': Age,
-                     'Sex': Sex,
-                     'ca': ca,
-                     'exang': exang,
-                     'thalach': thalach,
-                     'cp': cp,
-                     'slope': slope,
-                     'chole': chole,
+  user_input_data = {'Age': Edad,
+                     'Sex': Sexo,
+                     'ca': ataque del corazon,
+                     'exang': angina,
+                     'thalach': frecuencia cardiaca,
+                     'cp': paro cardiaco,
+                     'slope': inclinacion,
+                     'chole': colesterol,
                      'thal': thal,
-                     'oldpeak': oldpeak,
-                     'trestbps': trestbps,
-                     'fbs': fbs,
+                     'oldpeak': pico antiguo,
+                     'trestbps': presion en reposo,
+                     'fbs': fibrosis,
                      'restecg': restecg
                      }
 
@@ -51,6 +51,7 @@ def user_input_features():
 df = user_input_features()
 
 HEART2 =  pd.read_csv('HEART2csv', encoding='latin-1')
+
 X = df.drop(target_column, axis=1)
 y = df[target_column]
 
