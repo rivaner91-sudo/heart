@@ -53,8 +53,8 @@ df = user_input_features()
 
 HEART2 =  pd.read_csv('HEART2.csv', encoding='latin-1')
 #df= df.drop(columns=['target'])
-X = df.drop(columns='target', axis=1)
-Y = df['target']
+X = HEART2.drop(columns='target', axis=1)
+Y = HEART2['target']
 
 
 classifier = DecisionTreeClassifier(max_depth=5, criterion='entropy', min_samples_leaf=10, max_features=5, random_state=0)
