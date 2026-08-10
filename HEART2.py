@@ -28,9 +28,9 @@ def user_input_features():
   restecg= st.number_input('restecg:', min_value=0, max_value=1, value = 0, step = 1)
 
 
-  user_input_data = {'Age': age,
+  user_input_data = {'Age': Age,
                      'Sex': Sex,
-                     'ca': Aca,
+                     'ca': ca,
                      'exang': exang,
                      'thalach': thalach,
                      'cp': cp,
