@@ -53,7 +53,7 @@ df = user_input_features()
 
 HEART2 =  pd.read_csv('HEART2.csv', encoding='latin-1')
 #df= df.drop(columns=['target'])
-X = HEART2.drop(columns='target', axis=1)
+X = HEART2.drop(columns='target')
 Y = HEART2['target']
 
 
