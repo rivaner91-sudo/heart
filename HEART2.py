@@ -28,20 +28,21 @@ def user_input_features():
   restecg= st.number_input('restecg:', min_value=0, max_value=1, value = 0, step = 1)
 
 
-  user_input_data = {'age': age,
-                     'sex': sex,
-                     'ca': ca,
-                     'exang': exang,
-                     'thalach': thalach,
-                     'cp': cp,
-                     'slope': slope
-                     'chol': chol,
-                     'thal': thal,
-                     'oldpeak': oldpeak,
-                     'trestbps': trestbps,
-                     'fbs': fbs,
-                     'restecg': restecg
-                   }
+  user_input_data = {
+                     'age' : age,
+                     'sex' : sex,
+                     'ca' : ca,
+                     'exang' : exang,
+                     'thalach' : thalach,
+                     'cp' : cp,
+                     'slope' : slope,
+                     'chol' : chol,
+                     'thal' : thal,
+                     'oldpeak' : oldpeak,
+                     'trestbps' : trestbps,
+                     'fbs' : fbs,
+                     'restecg' : restecg                 
+                     }
 
 
   features = pd.DataFrame(user_input_data, index=[0])
